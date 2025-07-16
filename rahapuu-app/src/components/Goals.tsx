@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Target, Edit, Trash2, Check } from 'lucide-react';
+import { Plus, Edit, Trash2, Check } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { calculateGoalProgress, formatCurrency } from '../utils/calculations';
 import type { SavingsGoal } from '../types';
