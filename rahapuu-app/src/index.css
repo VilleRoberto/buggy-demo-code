@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gradient-to-b from-sky-blue to-sky-300 min-h-screen font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-tree-green hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg border;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 backdrop-blur-sm;
+  }
+  
+  .tree-container {
+    @apply relative w-full h-96 flex items-end justify-center;
+  }
+  
+  .leaf {
+    @apply absolute rounded-full transition-all duration-300 cursor-pointer transform hover:scale-110;
+    animation: grow 0.5s ease-out;
+  }
+  
+  .fruit {
+    @apply absolute rounded-full transition-all duration-300 cursor-pointer transform hover:scale-110;
+    animation: bounceIn 0.6s ease-out;
+  }
+  
+  .goal-card {
+    @apply bg-white rounded-xl shadow-lg p-4 border-l-4 border-tree-green transition-all duration-200 hover:shadow-xl;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-3 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-tree-green to-green-400 transition-all duration-500 ease-out;
+  }
+}
